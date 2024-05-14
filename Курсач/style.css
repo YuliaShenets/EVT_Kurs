@@ -1,0 +1,434 @@
+*{
+    margin: 0; 
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+.light-theme{
+--main-color:#000000;
+--navbar-color:#121212;
+--text-color:#FFF;
+--arrow-color:#ffffffb2;
+--footer-color:#333;
+}
+
+.dark-theme{
+    --main-color:#dce5e1;
+    --navbar-color:#c0cac5;
+    --text-color:#000000;
+    --arrow-color:#929292b2;
+    --footer-color:#c0cac5;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: var(--main-color);
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+}
+
+.navbar-contener{
+    display: flex;
+    align-items: center;
+    background-color: var(--navbar-color);
+    padding: 0 50px;
+    height: 100%;
+}
+
+.logo-contener{
+    flex: 1;
+}
+
+.logo{
+    align-items: center;
+}
+
+.menu-contener {
+    flex: 2 ;
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+.menu-list-item{
+    margin-right: 30px;
+    color: var(--text-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.menu-list-item:hover {
+    transform: scale(1.1); /* Увеличиваем элемент на 10% при наведении */
+    cursor: pointer;
+}
+
+
+.search-bar{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--navbar-color);
+}
+
+input {
+        width: 280px;
+        height: 40px;
+        padding-left: 15px;
+        border-radius: 40px;
+        border: 2px solid #12B77C;
+        background: #dce5e1;
+        outline: none;
+        position: relative;
+        transition: .3s linear;
+        z-index: 0;
+    
+}
+
+input:focus {
+  width: 300px;
+}
+.profile-contener {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-contener{
+    margin: 0 20px;
+    align-items: center;
+}
+
+.profile-text{
+    color: var(--text-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile-text-contener:hover {
+    transform: scale(1.1); /* Увеличиваем элемент на 10% при наведении */
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    align-items: center;
+    fill: var(--text-color);
+}
+
+.burger-btn{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    left: 5px;
+    transition: transform .5s, opacity .5s ;
+}
+
+.burger-btn span:nth-child(1){
+    transform:translateY(-10px);
+}
+
+.burger-btn span:nth-child(3){
+    transform:translateY(10px);
+}
+
+.navbar.open .burger-btn span:nth-child(1){
+     transform: translateY(0) rotate(45deg);
+ }
+
+.navbar.open .burger-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.navbar.open .burger-btn span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+@media(max-width: 768px){
+    .burger-btn{
+        display: block;
+        
+    }
+
+    .menu-contener{
+        position: absolute;
+        left: -107%;
+        top:0;
+        width: 100%;
+        background-color: #12B77C;
+        padding: 75px 20px 20px 20px;
+        transition: transform.5s;
+    }
+
+    .menu-list{
+        display: block;
+    }
+
+
+    .menu-link{
+        color: #ffffff;
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navbar.open .menu-contener {
+        transform: translateX(100%);
+    }
+
+    .logo-contener {
+        display: none;
+      }
+
+    .search-bar input {
+        width: 75%; /* Устанавливаем ширину в 1/3 от родительского контейнера */
+        max-width: none; /* Отменяем максимальную ширину, если она была установлена */
+      }
+}
+
+
+/*Главная карусель*/
+.container {
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carousel {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    
+}
+
+.slide {
+    margin: 70px;
+    flex: 0 0 calc(1300px + 30px); /* Ширина слайда с учетом отступов */
+    margin-right: 40px; 
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+
+.slide img {
+    width: 1300px; /* Ширина картинки равна ширине экрана */
+    height: 600px; /* Высота картинки равна высоте экрана */
+    object-fit: cover; /* Растягиваем изображение, чтобы оно полностью покрывало контейнер */
+}
+
+.movie-list-title{
+    color: var(--text-color);
+}
+/* Карусели с фильмами*/
+.movie-list-container{
+    padding: 50px;
+}
+
+.movie-list-item-desc{
+    color: #FFF;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    color: var(--arrow-color);
+    right: 0;
+    cursor: pointer;
+}
+
+.movie-list{
+display: flex;
+align-items: center;
+height: 350px;
+transform: translateX(0);
+transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+    
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 20px ;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*не трогать*/
+.movie-list-item-desc{
+    background-color: #0000007c;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 30px;
+    width: 150px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    background-color: #12B77C;
+    color: #FFF;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px ;
+    left: 30px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+/*не трогать*/
+
+
+/*футер*/
+
+.title-text{
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    color: var(--text-color);
+}
+
+.title-text h4{
+    color: var(--text-color);
+    font-size: 40px;
+}
+
+.title-text h1{
+    font-size: 40px;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: var(--footer-color); /* Цвет фона футера */
+    color: var(--text-color); /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding внутри размеров элемента */
+}
+
+.container {
+    width: 100%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по краям контейнера */
+}
+
+.footer-contact, .footer-map, .footer-social {
+    flex: 1; /* Равномерное распределение пространства между блоками */
+}
+
+
+.social-link {
+    color: var(--text-color); /* Цвет ссылок на соц. сети */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    margin-bottom: 10px; /* Внешний отступ между ссылками */
+    display: block;
+}
+
+.footer-social {
+    text-align: center; /* Выравнивание по центру */
+}
+
+.footer-contact, .footer-map {
+    text-align: center; /* Выравнивание по центру */
+}
+
+.footer-social p,.footer-contact p, .footer-map p{
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.footer-map a {
+    color: inherit; /* Унаследовать цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    display: inline-block; /* Преобразовать ссылку в блочный элемент */
+    transition: transform 0.2s; /* Добавить плавное изменение размера */
+}
+
+.footer-contact:hover , .footer-social:hover , .footer-map a:hover  {
+    transform: scale(1.05); /* Немного увеличить размер при наведении */
+    cursor: pointer;
+}
+
+@media screen and (min-width: 381px) {
+    body {
+        overflow-x: auto; /* Включить горизонтальную полосу прокрутки */
+    }
+}
+
+
+
+
+
+

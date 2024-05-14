@@ -1,0 +1,462 @@
+*{
+    margin: 0; 
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.light-theme{
+--main-color:#000000;
+--navbar-color:#121212;
+--text-color:#FFF;
+--arrow-color:#ffffffb2;
+--footer-color:#333;
+--review-color:rgba(95, 95, 95, 0.54);
+}
+
+.dark-theme{
+    --main-color:#dce5e1;
+    --navbar-color:#c0cac5;
+    --text-color:#000000;
+    --arrow-color:#929292b2;
+    --footer-color:#E9E7E7;
+    --review-color:rgba(155, 155, 155, 0.54);
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-size: 16px;
+  min-width: 280px;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+}
+
+.navbar-contener{
+    display: flex;
+    align-items: center;
+    background-color: var(--navbar-color);
+    padding: 0 50px;
+    height: 100%;
+}
+
+.logo-contener{
+    flex: 1;
+}
+
+.logo{
+    align-items: center;
+}
+
+.menu-contener {
+    flex: 2 ;
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+.menu-list-item{
+    margin-right: 30px;
+    color: var(--text-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.menu-list-item:hover {
+    transform: scale(1.1); /* Увеличиваем элемент на 10% при наведении */
+    cursor: pointer;
+}
+
+
+.search-bar{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--navbar-color);
+}
+
+input {
+        width: 280px;
+        height: 40px;
+        padding-left: 15px;
+        border-radius: 40px;
+        border: 2px solid #12B77C;
+        background: #dce5e1;
+        outline: none;
+        position: relative;
+        transition: .3s linear;
+}
+
+input:focus {
+  width: 300px;
+}
+.profile-contener {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-contener{
+    margin: 0 20px;
+    align-items: center;
+}
+
+.profile-text{
+    color: var(--text-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile-text-contener:hover {
+    transform: scale(1.1); /* Увеличиваем элемент на 10% при наведении */
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    align-items: center;
+    fill: var(--text-color);
+}
+
+.burger-btn{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    left: 5px;
+    transition: transform .5s, opacity .5s ;
+}
+
+.burger-btn span:nth-child(1){
+    transform:translateY(-10px);
+}
+
+.burger-btn span:nth-child(3){
+    transform:translateY(10px);
+}
+
+.navbar.open .burger-btn span:nth-child(1){
+     transform: translateY(0) rotate(45deg);
+ }
+
+.navbar.open .burger-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.navbar.open .burger-btn span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+@media(max-width: 768px){
+    .burger-btn{
+        display: block;
+        
+    }
+
+    .menu-contener{
+        position: absolute;
+        left: -107%;
+        top:0;
+        width: 100%;
+        background-color: #12B77C;
+        padding: 75px 20px 20px 20px;
+        transition: transform.5s;
+    }
+
+    .menu-list{
+        display: block;
+    }
+
+
+    .menu-link{
+        color: #ffffff;
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navbar.open .menu-contener {
+        transform: translateX(100%);
+    }
+
+    .logo-contener {
+        display: none;
+      }
+
+    .search-bar input {
+        width: 75%; /* Устанавливаем ширину в 1/3 от родительского контейнера */
+        max-width: none; /* Отменяем максимальную ширину, если она была установлена */
+      }
+}
+
+h2{
+    margin-bottom: 20px;
+}
+.container{
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 300px 530px 150px;
+    grid-gap: 40px ;
+    padding-top: 60px;
+    z-index: 0;
+}
+
+.name{
+font-size: 36px;
+padding-top: 10px;
+margin-bottom: 20px;
+}
+
+.description{
+margin-bottom: 50px;
+}
+
+.params{
+list-style-type: none;
+}
+
+.params li{
+margin-top: 20px;
+display: flex;
+width: 100%;
+
+}
+
+.params li .lable {
+    width: 130px;
+    margin-right: 30px;
+    opacity: 0.8;
+
+}
+
+.rathing-main{
+display: block;
+margin-bottom: 10px;
+font-weight: 600;
+font-size: 36px;
+color: #12B77C;
+}
+
+.rathing-counts{
+display: block;
+margin-bottom: 10px;
+opacity: 0.5;
+}
+
+.rathing-details {
+    display: inline-block;
+    color: var(--text-color); 
+    text-decoration: none; 
+}
+
+.rathing-details:hover {
+    text-decoration: underline; 
+}
+
+.plot-container {
+    margin-top: 60px;
+   width: 100%;
+}
+
+.actors-content {
+    margin-top: 60px; 
+}
+
+.actors-container {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.actor {
+    width: 150px;
+}
+
+.actor img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.actor p {
+    margin-top: 10px; /* Отступ сверху */
+    line-height: 1.2; /* Межстрочный интервал */
+}
+
+.video-container {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 для видео */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.review{
+    margin-top: 60px;
+}
+
+
+.review-content-new {
+    margin-top: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 10px; /* добавляем отступы вокруг текста */
+    background-color: var(--review-color); /* серый фон */
+    transition: background-color 0.3s, transform 0.3s; /* добавляем плавное изменение фона и размера */
+}
+
+.review-content-new:hover {
+    background-color: #626161d6; /* изменяем фон при наведении */
+    transform: scale(1.05); /* увеличиваем размер при наведении */
+    cursor: pointer; /* меняем курсор при наведении */
+}
+
+
+.review-content {
+    margin-top: 30px;
+}
+
+.username{
+    color: var(--text-color);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 28px */
+}
+
+.rating{
+    margin-top: 5px;
+}
+
+.review-block {
+    position: relative; /* Добавляем относительное позиционирование */
+    background-color: var(--review-color);
+    columns: var(--text-color); 
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100%; 
+    margin-top: 30px;
+}
+
+.review-badge-9 ,.review-badge-4 , .review-badge-6 {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    width: 50px;
+    height: 50px;
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    display: flex; /* Добавляем свойство flex */
+    justify-content: center; /* Выравниваем по горизонтали по центру */
+    align-items: center; /* Выравниваем по вертикали по центру */
+    z-index: 1;
+}
+
+.review-badge-9{background-color: #12B77C;}
+.review-badge-4{background-color: #F00;}
+.review-badge-6{background-color: #9A9898;}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: var(--navbar-color); /* Цвет фона футера */
+    color: var(--text-color); /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding внутри размеров элемента */
+}
+
+.footer-container {
+    width: 100%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по краям контейнера */
+}
+
+.footer-contact, .footer-map, .footer-social {
+    flex: 1; /* Равномерное распределение пространства между блоками */
+}
+
+
+.social-link {
+    color: var(--text-color); /* Цвет ссылок на соц. сети */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    margin-bottom: 10px; /* Внешний отступ между ссылками */
+    display: block;
+}
+
+.footer-social {
+    text-align: center; /* Выравнивание по центру */
+}
+
+.footer-contact, .footer-map {
+    text-align: center; /* Выравнивание по центру */
+}
+
+.footer-social p,.footer-contact p, .footer-map p{
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.footer-map a {
+    color: inherit; /* Унаследовать цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    display: inline-block; /* Преобразовать ссылку в блочный элемент */
+    transition: transform 0.2s; /* Добавить плавное изменение размера */
+}
+
+.footer-contact:hover , .footer-social:hover , .footer-map a:hover  {
+    transform: scale(1.05); /* Немного увеличить размер при наведении */
+    cursor: pointer;
+}

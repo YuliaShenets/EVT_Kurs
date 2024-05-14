@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://kit.fontawesome.com/9d9eeebf86.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Movie</title>
+</head>
+
+<body>
+
+    <!-- Шапка -->
+<header class="navbar open">
+    <div class="navbar-contener">
+
+        <button class="burger-btn" id="burger">
+            <span> </span><span> </span><span> </span>
+        </button>
+
+        <!-- Логотип -->
+        <div class="logo-contener"><h1 class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="28" viewBox="0 0 45 28" fill="none">
+            <path d="M22.4997 15L44.5833 27.75H0.416016L22.4997 15Z" fill="#12B77C"/>
+            <path d="M16.2084 22.9997H11L18.9361 0.0107422H25.1997L33.1246 22.9997H27.9162L22.1577 5.26407H21.9781L16.2084 22.9997ZM15.8829 13.9635H28.1856V17.7576H15.8829V13.9635Z" fill="white"/>
+          </svg></h1>
+        </div>
+        
+        <!-- Меню -->
+        <div class="menu-contener">
+            <ul class=" menu-list">
+                <li class="menu-list-item"><a class="menu-link" href="index3.html">Каталог</a></li>
+                <li class="menu-list-item"><a class="menu-link" href="index3.html">Рейтинг</a></li>
+                <li class="menu-list-item"><a class="menu-link" href="main.html">Главная</a></li>
+            </ul>
+        </div> 
+
+        <!-- Поиск -->
+        <div class="search-bar">
+        <form>
+            <input type="text"  placeholder="Искать здесь..." >
+        </form>
+        </div>
+
+        <!-- Профиль + цветовая схема -->
+        <div class="profile-contener">
+            <img class="profile-img" src="https://sun9-78.userapi.com/impg/7os-psRemeLionKWJnPX5Gil5hQeT0PstEe4jA/St5FF-zqLHE.jpg?size=1080x1080&quality=95&sign=2c64ecc48637e855233257017a3e2e01&c_uniq_tag=Y4W3cPAvosvbfw4COVdZ2PxFCm7Xlc4OEdvWSH20BsQ&type=album" alt="">
+            <div class="profile-text-contener">
+                <span class="profile-text">Yulia 
+                </span>
+    
+            </div>
+            <div class="toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
+                    <path d="M8.02083 0.772917C5.41042 2.45 3.64583 5.41042 3.64583 8.79375C3.64583 12.1771 5.41042 15.1375 8.06458 16.8146C3.5875 16.8146 0 13.2271 0 8.79375C0 6.66649 0.84505 4.62636 2.34925 3.12216C3.85345 1.61797 5.89358 0.772917 8.02083 0.772917ZM24.8938 2.96042L26.9792 5.04583L4.27292 27.7521L2.1875 25.6667L24.8938 2.96042ZM15.8813 6.50417L13.7229 5.14792L11.6229 6.60625L12.2354 4.12708L10.2083 2.58125L12.7604 2.40625L13.6062 0L14.5833 2.37708L17.1062 2.42083L15.1375 4.06875L15.8813 6.50417ZM11.0688 11.7688L9.37708 10.7042L7.74375 11.8417L8.23958 9.91667L6.65 8.70625L8.63333 8.575L9.28958 6.69375L10.0333 8.54583L12.0167 8.58958L10.4854 9.85833L11.0688 11.7688ZM24.7917 17.5438C24.7917 19.671 23.9466 21.7111 22.4424 23.2153C20.9382 24.7195 18.8981 25.5646 16.7708 25.5646C14.9917 25.5646 13.3438 24.9813 12.0167 24.0042L23.2313 12.7896C24.2083 14.1167 24.7917 15.7646 24.7917 17.5438ZM18.375 27.1396L22.4146 25.4625L22.0646 30.3479L18.375 27.1396ZM24.6896 23.2021L26.3667 19.1625L29.575 22.8667L24.6896 23.2021ZM26.3667 15.9688L24.7042 11.9146L29.575 12.2646L26.3667 15.9688ZM11.1271 25.4625L15.1667 27.1396L11.4771 30.3333L11.1271 25.4625Z" fill="white"/>
+                  </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <div class="movie-block" >
+    <img src="4.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">Один дома</h2>
+            <p class="movie-country">США</p>
+            <p class="movie-rating"> Оцека: 8/10</p>
+            <p class="movie-description">Американское семейство отправляется из Чикаго в Европу, но в спешке сборов бестолковые родители забывают дома... одного из своих детей. Юное создание, однако, не теряется и демонстрирует чудеса изобретательности. И когда в дом залезают грабители, им приходится не раз пожалеть о встрече с милым крошкой.</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+   <div class="movie-block">
+    <img src="2.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">Принцесса и лягушка</h2>
+            <p class="movie-country">США</p>
+            <p class="movie-rating"> Оцека: 9,2/10</p>
+            <p class="movie-description">Красавица Ириа – принцесса маленького королевства отказывала всем принцам, предлагавшим ей когда либо руку и сердце. Близилось ее восемнадцатилетние и она стала волноваться, что никогда не встретит принца своей мечты, и королевство не кому будет наследовать. Однажды летней ночью, Ирия шептала с луной, поверяя ей все свои заботы, и ее подслушал очаровательный озорной лягушонок. Ирия и не подозревала, что зеленое создание на четырех лапках в действительности заколдованный принц, чары над которым развеются, если его поцелует принцесса...</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+   <div class="movie-block">
+    <img src="9.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">Три богатыря и наследница</h2>
+            <p class="movie-country">Россия</p>
+            <p class="movie-rating"> Оцека: 8,7/10</p>
+            <p class="movie-description">Князь Киевский решил назначить наследника престола, только вот незадача - кто это может быть? Родственник, друг семьи или может быть, заморская принцесса? Недолго думая, Князь-батюшка выбирает почти принцессу, а главное родственницу - племянницу Забаву. Нынче она вместе со своим мужем Елисеем (помните верного ученика Добрыни Никитича?) получает образование в далеком Царьграде, где правит коварный Василевс. Чтобы вернуть наследницу на родные просторы за тридевять земель в спешном порядке отправляются три богатыря и, конечно же, главный придворный конь Юлий.</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+   <div class="movie-block">
+    <img src="15.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">В поисках Немо</h2>
+            <p class="movie-country">США</p>
+            <p class="movie-rating"> Оцека: 7,2/10</p>
+            <p class="movie-description">Рыба-клоун Марлин после трагической гибели жены в одиночку растит своего единственного сына Немо. Однажды любопытный Немо, чтобы доказать, что он уже взрослый, плывет в открытый океан и попадает в неприятности. Марлин отправляется на поиски сына.</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+
+   <div class="movie-block">
+    <img src="6.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">Алиса в стране чудес</h2>
+            <p class="movie-country">США</p>
+            <p class="movie-rating"> Оцека: 9,2/10</p>
+            <p class="movie-description">Алиса гонится за Белым Кроликом через весь луг и видит, как он исчезает в кроличьей норе. Затем, неожиданно, Алиса падает туда сама, летит вниз по странному, сказочному туннелю и приземляется в круглом зале со множеством дверей. Выпив из бутылки с надписью «ВЫПЕЙ МЕНЯ», она уменьшается в размерах, а откусив от пирожного с надписью «СЪЕШЬ МЕНЯ» — вырастает. Наконец, миновав череду злоключений, Алиса попадает через одну из дверей в чудесный фантастический мир, который его обитатели называют Подземной страной.</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+   <div class="movie-block">
+    <img src="10.jpg" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">Коралина в стране кошмаров</h2>
+            <p class="movie-country">Англия</p>
+            <p class="movie-rating"> Оцека: 9,1/10</p>
+            <p class="movie-description">Маленькая Коралина попадает в другой мир, скрытый за секретной дверцей. Этот мир — ее альтернативная жизнь, которая не перестает ее радовать, все здесь хорошо, но только до поры до времени. Однажды она понимает, что ее настоящим родителям за ее проделки угрожает смертельная опасность.</p>
+            <button class="watch-button"><a href="index2.html">Смотреть</a></button>
+        </div>
+   </div>
+
+
+   <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-contact" onclick="window.location.href='tel:+375298363020';">
+                <p>Телефон:</p>
+                <p>+375(29)836-30-20</p>
+            </div>            
+            <div class="footer-map">
+                <a href="https://maps.app.goo.gl/XTPFVbmfnzdcb2T29">
+                    <p>Мы находимся здесь</p>
+                    <p><i class="fas fa-map-marked-alt"></i> Minsk</p>
+                </a>
+            </div>
+            <div class="footer-social">
+                <p>Подписывайся на наши соц. сети</p>
+                <a href="https://vk.com/y.shenets" class="social-link"><i class="fab fa-vk"></i> VK</a>
+                <a href="https://www.instagram.com/_yulia_shenets_/?igsh=MTI0ejY5cnI0cmRzNg%3D%3D" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
